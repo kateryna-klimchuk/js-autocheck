@@ -65,3 +65,34 @@ apartment.location = {
 
 console.log(apartment.location.city);
 
+
+
+// Task 14.
+
+// Выполни рефакторинг функции countProps(object) используя метод Object.keys() и, 
+// возможно, но необязательно, цикл for...of.
+
+
+
+function countProps(object) {
+  // Change code below this line
+
+  let propCount = 0;
+  const keys = Object.keys(object);
+
+    for (const key of keys) {
+         propCount += 1;
+    
+    }
+
+    // ----- second option of solution ----
+
+//     for (const key in object) {
+//       propCount += 1;
+// 
+//   }
+
+  return propCount;
+  // Change code above this line
+}
+
