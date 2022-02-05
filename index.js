@@ -130,8 +130,8 @@
 // Task 19.
 
 // Напиши функцию getAllPropValues(propName) которая принимает один параметр
-// propName - имя(ключ) свойства.Функция должна вернуть массив всех значений 
-// свойства с таким именем из каждого объекта в массиве products. 
+// propName - имя(ключ) свойства.Функция должна вернуть массив всех значений
+// свойства с таким именем из каждого объекта в массиве products.
 // Если в объектах нет свойства с таким именем, функция должна вернуть пустой массив.
 
 // const products = [
@@ -147,7 +147,7 @@
 // for (const product of products) {
 //     for (const key in product) {
 //         if (key === propName) {
-//             newArray.push(product[propName]);            
+//             newArray.push(product[propName]);
 //         }
 //     }
 //     }
@@ -170,3 +170,44 @@
 // console.log(getAllPropValues());
 
 
+// Task 20.
+
+// Напиши функцию calculateTotalPrice(productName) которая принимает один 
+// параметр productName - название товара.Функция должна вернуть общую
+// стоимость(цена * количество) товара с таким именем из массива products.
+
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   // Пиши код ниже этой строки
+//   let totalPrice = 0;
+//   for (const product of products) {
+//     if (product.name === productName) {
+//     totalPrice = product.price * product.quantity;
+//     return totalPrice;
+//     }
+//   }
+//     return totalPrice;
+
+//   // Пиши код выше этой строки
+// }
+
+// calculateTotalPrice("Blaster");
+// console.log(calculateTotalPrice());
+// calculateTotalPrice("Radar");
+// console.log(calculateTotalPrice());
+
+// calculateTotalPrice("Droid");
+// console.log(calculateTotalPrice());
+
+// calculateTotalPrice("Grip");
+// console.log(calculateTotalPrice());
+
+// calculateTotalPrice("Scanner");
+// console.log(calculateTotalPrice());
