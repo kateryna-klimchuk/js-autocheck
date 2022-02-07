@@ -1,33 +1,3 @@
-// // M-2. Arrays and function
-
-
-// // =========== Searching common elements at two arrays ================
-
-
-// const element = function getCommonElements(array1, array2) {
-//   // Change code below this line
-//     let commonArray = [];
-
-//     for (const element of array1) {
-//         for (const element2 of array2) {
-//             if (array2.includes(element)) {
-//                 commonArray.push(element);
-//                 break;
-//             }
-            
-//         }
-//     }
-    
-
-//     return commonArray;
-
-//  // Change code above this line
-// }
-
-// const total = element([2, 2, 3, 5, 6], [4, 5, 6, 10]);
-
-// console.log(total);
-
 
 // // M-3. Objects
 
@@ -310,68 +280,69 @@
 
 
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
-    addPotion(newPotion) {
-      for (const item of this.potions) {
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//     addPotion(newPotion) {
+//       for (const item of this.potions) {
 
-          if (item.name === newPotion.name) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
- ;
-    } 
-    }
-        this.potions.push(newPotion);
-    },
+//           if (item.name === newPotion.name) {
+//         return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//  ;
+//     }
+//     }
+//         this.potions.push(newPotion);
+//     },
 
-  removePotion(potionName) {
+//   removePotion(potionName) {
 
-    const { potions } = this;
+//     const { potions } = this;
 
-    for (let i = 0; i < potions.length; i += 1) {
-      const item = potions[i];
-      if (potionName === item.name) {
-            potions.splice(i, 1);
-      }
-      }
-    return;
-    },
+//     for (let i = 0; i < potions.length; i += 1) {
+//       const item = potions[i];
+//       if (potionName === item.name) {
+//             potions.splice(i, 1);
+//       }
+//       }
+//     return;
+//     },
   
-    updatePotionName(oldName, newName) {
-            const { potions } = this;
+//     updatePotionName(oldName, newName) {
+//             const { potions } = this;
 
 
-        for (let i = 0; i < potions.length; i += 1) {
-            console.log(i);
-            if (oldName === potions[i].name) {
-                potions[i].name = newName;
-            }
-        }
-  },
-  // Change code above this line
-};
+//         for (let i = 0; i < potions.length; i += 1) {
+//             console.log(i);
+//             if (oldName === potions[i].name) {
+//                 potions[i].name = newName;
+//             }
+//         }
+//   },
+//   // Change code above this line
+// };
 
 
-atTheOldToad.getPotions();
-console.log(atTheOldToad.getPotions());
+// atTheOldToad.getPotions();
+// console.log(atTheOldToad.getPotions());
 
-// atTheOldToad.addPotion({ name: "romery", price: 620 });
-atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
-atTheOldToad.addPotion({ name: "Stone skin", price: 520 });
-atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+// // atTheOldToad.addPotion({ name: "romery", price: 620 });
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// atTheOldToad.addPotion({ name: "Stone skin", price: 520 });
+// atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
 
-// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+// // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
 
-console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.getPotions());
 
 
-// console.log(atTheOldToad.addPotion());
+// // console.log(atTheOldToad.addPotion());
 
-// console.log(atTheOldToad);
+// // console.log(atTheOldToad);
+
