@@ -172,7 +172,7 @@
 
 // Task 20.
 
-// Напиши функцию calculateTotalPrice(productName) которая принимает один 
+// Напиши функцию calculateTotalPrice(productName) которая принимает один
 // параметр productName - название товара.Функция должна вернуть общую
 // стоимость(цена * количество) товара с таким именем из массива products.
 
@@ -211,3 +211,167 @@
 
 // calculateTotalPrice("Scanner");
 // console.log(calculateTotalPrice());
+
+
+// Task 30.
+
+// Напиши функцию makeTask(data) которая принимает один параметр data - объект со следующими свойствами.
+
+// text - текст задачи.
+// category - категория задачи.
+// priority - приоритет задачи.
+// Функция должна составить и вернуть новый объект задачи, не изменяя напрямую параметр data.
+// В новом объекте должно быть свойство completed, значение которого хранится в одноимённой
+// локальной переменной.
+
+// В параметре data гарантированно будет только свойство text, а остальные два, category и priority,
+//     могут отсутствовать.Тогда, в новом объекте задачи, в свойствах category и priority должны быть
+//     значения по умолчанию, хранящиеся в одноимённых локальных переменных.
+
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = "General";
+//   const priority = "Normal";
+//   // Change code below this line
+//   const first = { category, priority, completed };
+//   return second = { ...first, ...data };
+
+//   // Change code above this line
+// }
+
+// makeTask({}) { category: 'General', priority: 'Normal', completed: false }
+
+
+// makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' }) { category: 'Homemade', priority: 'Low', text: 'Take out the trash', completed: false }
+
+
+// makeTask({ category: 'Finance', text: 'Take interest' }) { category: 'Finance', priority: 'Normal', text: 'Take interest', completed: false }
+
+
+// makeTask({ priority: 'Low', text: 'Choose shampoo' }) { category: 'General', priority: 'Low', text: 'Choose shampoo', completed: false }
+
+
+// makeTask({ text: 'Buy bread' }) { category: 'General', priority: 'Normal', text: 'Buy bread', completed: false }
+
+// Task 33.
+
+// Функция findMatches() принимает произвольное количество аргументов.
+// Первым аргументом всегда будет массив чисел, а остальные аргументы будут просто числами.
+
+// Дополни код функции так, чтобы она возвращала новый массив matches, в
+// котором будут только те аргументы, начиная со второго, которые есть в
+// массиве первого аргумента.
+
+//     Например, findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) должна вернуть массив[1, 2],
+//         потому что только они есть в массиве первого аргумента.
+
+// Change code below this line
+// function findMatches(array, ...args) {
+//   const matches = []; // Don't change this line
+//   for (const arg of args) {
+//     for (const el of array) {
+//       if (arg === el) {
+//         matches.push(arg);
+//       }
+//     }
+//   }
+
+//   // Change code above this line
+//   return matches;
+// }
+
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)` возвращает `[1, 2]`
+
+// findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2)` возвращает `[17, 89, 2]`
+
+// findMatches([10, 24, 41, 6, 9, 19], 24, 11, 9, 23, 41)` возвращает `[24, 9, 41]`
+
+// findMatches([63, 11, 8, 29], 4, 7, 16)` возвращает `[]`
+
+// Task 40.
+
+// Дополни метод updatePotionName(oldName, newName) так, чтобы он обновлял
+// название зелья с oldName на newName, в массиве зелий в свойстве potions.
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   updatePotionName(oldName, newName) {
+//     // Change code below this line
+//     const indexName = this.potions.indexOf(oldName);
+//     this.potions.splice(indexName, 1, newName);
+
+
+//     // Change code above this line
+//   },
+// };
+
+// Task 41.
+
+
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+    addPotion(newPotion) {
+      for (const item of this.potions) {
+
+          if (item.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+ ;
+    } 
+    }
+        this.potions.push(newPotion);
+    },
+
+  removePotion(potionName) {
+
+    const { potions } = this;
+
+    for (let i = 0; i < potions.length; i += 1) {
+      const item = potions[i];
+      if (potionName === item.name) {
+            potions.splice(i, 1);
+      }
+      }
+    return;
+    },
+  
+    updatePotionName(oldName, newName) {
+            const { potions } = this;
+
+
+        for (let i = 0; i < potions.length; i += 1) {
+            console.log(i);
+            if (oldName === potions[i].name) {
+                potions[i].name = newName;
+            }
+        }
+  },
+  // Change code above this line
+};
+
+
+atTheOldToad.getPotions();
+console.log(atTheOldToad.getPotions());
+
+// atTheOldToad.addPotion({ name: "romery", price: 620 });
+atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+atTheOldToad.addPotion({ name: "Stone skin", price: 520 });
+atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+
+console.log(atTheOldToad.getPotions());
+
+
+// console.log(atTheOldToad.addPotion());
+
+// console.log(atTheOldToad);
